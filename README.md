@@ -1,5 +1,13 @@
 # vue-imageapp
+From _The Vuetify 3 Tutorial - A Vue 3 UI Library_ 
+at https://www.youtube.com/watch?v=PzXaFXgsp60
 
+## Scaffolding
+```shell
+$> npm install -g @vue/cli
+$> vue create vue-imageapp
+
+```
 ## Project setup
 ```
 npm install
