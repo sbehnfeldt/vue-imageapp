@@ -6,8 +6,10 @@ at https://www.youtube.com/watch?v=PzXaFXgsp60
 ```shell
 $> npm install -g @vue/cli
 $> vue create vue-imageapp
-
+$> cd vue-imageapp
+$> vue add vuetify
 ```
+
 ## Project setup
 ```
 npm install
