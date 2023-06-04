@@ -9,8 +9,10 @@
             </v-list-item>
             <v-divider/>
             <v-list density="compact" nav>
-                <v-list-item prepend-icon="mdi-image" title="Color" value="color"></v-list-item>
-                <v-list-item prepend-icon="mdi-dialpad" title="Grayscale" value="gray"></v-list-item>
+                <v-list-item prepend-icon="mdi-image" title="Color Gallery" value="color"
+                             @click="selectOption(true)"></v-list-item>
+                <v-list-item prepend-icon="mdi-dialpad" title="Grayscale Gallery" value="gray"
+                             @click="selectOption(false)"></v-list-item>
             </v-list>
         </v-list>
 
@@ -19,7 +21,13 @@
 </template>
 
 <script setup>
+import {defineEmits} from 'vue';
 
+const emits = defineEmits(['selectOption']);
+
+const selectOption = (isColor) => {
+    emits("selectOption", isColor);
+}
 </script>
 
 <style scoped>

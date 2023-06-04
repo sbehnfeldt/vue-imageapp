@@ -1,11 +1,11 @@
 <template>
     <v-app>
         <!-- sidebar -->
-        <SideBar/>
+        <SideBar @select-option="onSelectOption"/>
 
         <v-main>
             <!-- cards-->
-            <ImageGallery />
+            <ImageGallery :asGrayscale="!isWithColor" />
         </v-main>
 
     </v-app>
@@ -14,4 +14,10 @@
 <script setup>
 import SideBar from "@/components/SideBar.vue";
 import ImageGallery from "@/components/ImageGallery.vue";
+import {ref} from "vue"
+
+const isWithColor = ref(true);
+const onSelectOption = (withColor) => {
+    isWithColor.value = withColor;
+}
 </script>
